@@ -114,7 +114,7 @@ fun BallGame(modifier: Modifier = Modifier) {
             .onSizeChanged { size = it }
     ) {
         Canvas(modifier = modifier.fillMaxSize()) {
-            drawRect(Color(0xFFF5F5F5))
+            drawRect(Color(0xFFFFFF))
 
             drawRect(
                 color = Color.Green,
@@ -124,14 +124,14 @@ fun BallGame(modifier: Modifier = Modifier) {
 
             walls().forEach {
                 drawRect(
-                    color = Color.DarkGray,
+                    color = Color.Black,
                     topLeft = Offset(it.left, it.top),
                     size = androidx.compose.ui.geometry.Size(it.width, it.height)
                 )
             }
 
             drawCircle(
-                color = Color.Red,
+                color = Color.Blue,
                 radius = r,
                 center = Offset(x, y)
             )
